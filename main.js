@@ -25,7 +25,7 @@ function Ball(x, y, velX, velY, color, size) {
 Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.arc(this.x, this.y, this.size, 0, 1 * Math.PI);
   ctx.fill();
 }
 
@@ -74,7 +74,7 @@ Ball.prototype.update = function() {
 
 let balls =[];
 
-while (balls.length < 60) {
+while (balls.length < 65) {
   let size = random(10,20);
   let ball = new Ball (
     random(0 + size,width - size),
@@ -90,7 +90,7 @@ while (balls.length < 60) {
 }
 
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.20)';
   ctx.fillRect(0, 0, width, height);
 
   for (let i = 0; i < balls.length; i++) {
